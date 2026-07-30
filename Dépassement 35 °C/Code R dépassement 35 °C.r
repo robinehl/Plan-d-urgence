@@ -2,8 +2,8 @@
 # Ces commandes pour le logiciel R permettent de calculer l'évolution des journées supérieures à 35 °C à Paris en comparant leur nombre pour l'année en cours avec celui des années 2000. Il peut être adapté pour d'autres villes en remplaçant les noms des fichiers et en adaptant, au besoin, les noms des variables.
 ###
 
-Paris_hist <- read_delim("Météo/Clermont-Ferrand 2000-2024.csv", delim = ";")
-Paris_2026 <- read_delim("Météo/Clermont-Ferrand 2026.csv", delim = ";")
+Paris_hist <- read_delim("Météo/Paris 2000-2024.csv", delim = ";")
+Paris_2026 <- read_delim("Météo/Paris 2026.csv", delim = ";")
 
 # Les données météorologiques étant journalières, seule l’année est extraite vu que l’analyse vise uniquement à compter les dépassements par jour
 Extraction_année <- function(AAAAMMJJ)as.integer(substr(as.character(AAAAMMJJ), 1, 4))
