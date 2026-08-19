@@ -119,7 +119,7 @@ DPE_commune_part <- DPE_commune_total %>%
 DPE_commune_part$part_passoires <- DPE_commune_part$F + DPE_commune_part$G
 # Pour les DPE établis pour les bâtiments existants, calculer la moyenne de la part des passoires classés F ou G
 dpe_passoires <- dpe %>%
-+     filter(etiquette_dpe %in% c("F", "G"))
+     filter(etiquette_dpe %in% c("F", "G"))
 Passoires_moyenne <- (nrow(dpe_passoires)/nrow(dpe))
 
 ### Vérifier si la part des passoires thermiques d'une commune est influencée par le revenu médian de la population communale
